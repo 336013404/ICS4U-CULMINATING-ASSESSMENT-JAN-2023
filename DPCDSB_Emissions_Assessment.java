@@ -1,11 +1,11 @@
 //Client Code
-public class DPCDSB_Emissions_Assessment {
+public class DPCDSB_ECO_Schools_Assessment {
     public static void main(String[] args) {   
         //Create objects
 //<Marcus>
         Emissions LOYO = new Emissions("Loyola", 9, 10, 2670, 840);
         Emissions STFX = new Emissions("St.Francis-Xavier", 8.5, 10, 4050, 1200);
-//<yan>
+//<Ryan>
         Emissions GONZ = new Emissions("Gonzaga", 9, 12, 3490, 1033);
         Emissions CARD = new Emissions("Cardinal Leger", 9, 16, 4308, 1500);
         Emissions ROCH = new Emissions("St.Roch", 12, 12, 2670, 970);
