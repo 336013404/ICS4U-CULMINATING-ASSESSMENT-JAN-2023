@@ -3,11 +3,6 @@ public class DPCDSB_Emissions_Assessment {
     public static void main(String[] args) {   
         //Create objects
 //<Marcus>
-
-
-
-
-
         Emissions LOYO = new Emissions("Loyola", 12, 7, 2880, 1000);
         Emissions STFX = new Emissions("St.Francis-Xavier", 8.5, 10, 4050, 1200);
 //<Ryan>
