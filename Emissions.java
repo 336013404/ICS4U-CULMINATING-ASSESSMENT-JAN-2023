@@ -72,6 +72,8 @@ public class Emissions {
     public Integer getNumberOfStudents() {
         return numberOfStudents;
     }
+
+    
 //<-   -   -   -   -   -      Ryan     -   -   -   -   -   ->
     // returns all data given and created
     public String toString() {
@@ -87,4 +89,4 @@ public class Emissions {
         "\n\t\tAverage Co2 emissions per student per year: "    + String.format("%.2f", studentEmissions()) + " kgCO2e/student/year" +
         "\nTrees needed to offset emissions: "                  + carbonOffset() + "\n" ;
     }
-}
+}    
