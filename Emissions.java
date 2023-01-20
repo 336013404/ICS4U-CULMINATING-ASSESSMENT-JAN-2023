@@ -83,8 +83,8 @@ public class Emissions {
         "\n\tHours in use: "                                    + getHoursUsedPerDay() +
         "\n\t\tAverage wattage per bulb: "                      + String.format("%.2f",averageWattage()) + " kW" +
         "\n\t\tAverage yearly kWh: "                            + String.format("%.2f", averageYearlyPower()) + " kWh/year" +
-        "\n\t\tYearly total Co2 emissions: "                    + String.format("%.2f", yearlyEmissions()) + " kg/year" +
-        "\n\t\tAverage Co2 emissions per student per year: "    + String.format("%.2f", studentEmissions()) + " kg/year" +
+        "\n\t\tYearly total Co2 emissions: "                    + String.format("%.2f", yearlyEmissions()) + " kgCO2e/year" +
+        "\n\t\tAverage Co2 emissions per student per year: "    + String.format("%.2f", studentEmissions()) + " kgCO2e/student/year" +
         "\nTrees needed to offset emissions: "                  + carbonOffset() + "\n" ;
     }
 }
