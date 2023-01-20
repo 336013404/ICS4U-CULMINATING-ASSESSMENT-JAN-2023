@@ -10,10 +10,9 @@ public class Emissions {
     
     //Variables final
     private final int treeAbsorption = 12; // 12kg per tree
-    private final int schoolDaysAYear = 194; // @ https://www.dpcdsb.org/schools/school-year-calendar
     private final double emissionsPerkWh = 0.180; //As per cpt instructional pdf
 
-    // Constructor
+    // Constructor  
     public Emissions( String name, double hours, double wattage, int bulbs, int students) {
         schoolName = name;
         hoursUsedPerDay = hours;
@@ -29,7 +28,17 @@ public class Emissions {
     
     // new modifier
     public Double averageYearlyPower() {
-        return (double) (hoursUsedPerDay * schoolDaysAYear * averageWattage());
+        return averageMonthlyPower() * 12;
+    }
+
+    //new modifier
+    public Double averageMonthlyPower() {
+        return averageDailyPower() * 30;
+    }
+
+    //new modifier
+    public Double averageDailyPower() {
+        return averageWattage() * hoursUsedPerDay;
     }
     
     // new modifier 
@@ -72,21 +81,20 @@ public class Emissions {
     public Integer getNumberOfStudents() {
         return numberOfStudents;
     }
-
-//<-  -  -  -  -  -  Ryan  -  -  -  -  -  ->
+//<-   -   -   -   -   -      Ryan     -   -   -   -   -   ->
     // returns all data given and created
-    public String toString(){
-        return
-        "School: "                                               + getSchoolName() +
-        "\n\tNumber of students: "                               + getNumberOfStudents() +
-        "\n\tNumber of bulbs: "                                  + getNumOfBulbs() +
-        "\n\tWatts per bulb: "                                   + getWattsPerBulb() +
-        "\n\tHours in use: "                                     + getHoursUsedPerDay() +
-        "\n\t\tAverage wattage per bulb: "                       + String.format("%.2f", averageWattage()) + " kW" +
-        "\n\t\tAverage yearly kWh: "                             + String.format("%.2f", averageYearlyPower()) + " kWh/year" +
-        "\n\t\tYearly total Co2 Emissions: "                     + String.format("%.2f", yearlyEmissions()) + " kgCo2e/year" +
-        "\n\t\tAverage Co2 Emissions per Student per Year: "     + String.format("%.2f", studentEmissions()) + " kgCo2e/student/year" +
-        "\nTrees needed to offset emissions: "                   + carbonOffset() + "\n" ;
-    
+    public String toString() {
+        return 
+        "School: "                                              + getSchoolName() + 
+        "\n\tNumber of students: "                              + getNumberOfStudents()  + 
+        "\n\tNumber of bulbs: "                                 + getNumOfBulbs()  + 
+        "\n\tWatts per bulbs: "                                 + getWattsPerBulb() + 
+        "\n\tHours in use: "                                    + getHoursUsedPerDay() +
+        "\n\t\tAverage wattage per bulb: "                      + String.format("%.2f",averageWattage()) + " kWh" +
+        "\n\t\tAverage daily kWh: "                             + String.format("%.2f", averageDailyPower()) + " kWh/day" +
+        "\n\t\tAverage yearly kWh: "                            + String.format("%.2f", averageYearlyPower()) + " kWh/year" +
+        "\n\t\tYearly total Co2 emissions: "                    + String.format("%.2f", yearlyEmissions()) + " kg/year" +
+        "\n\t\tAverage Co2 emissions per student per year: "    + String.format("%.2f", studentEmissions()) + " kg/year" +
+        "\nTrees needed to offset emissions: "                  + carbonOffset() + "\n" ;
     }
-}    
+}
