@@ -73,20 +73,20 @@ public class Emissions {
         return numberOfStudents;
     }
 
-    
-//<-   -   -   -   -   -      Ryan     -   -   -   -   -   ->
+//<-  -  -  -  -  -  Ryan  -  -  -  -  -  ->
     // returns all data given and created
-    public String toString() {
-        return 
-        "School: "                                              + getSchoolName() + 
-        "\n\tNumber of students: "                              + getNumberOfStudents()  + 
-        "\n\tNumber of bulbs: "                                 + getNumOfBulbs()  + 
-        "\n\tWatts per bulbs: "                                 + getWattsPerBulb() + 
-        "\n\tHours in use: "                                    + getHoursUsedPerDay() +
-        "\n\t\tAverage wattage per bulb: "                      + String.format("%.2f",averageWattage()) + " kW" +
-        "\n\t\tAverage yearly kWh: "                            + String.format("%.2f", averageYearlyPower()) + " kWh/year" +
-        "\n\t\tYearly total Co2 emissions: "                    + String.format("%.2f", yearlyEmissions()) + " kgCO2e/year" +
-        "\n\t\tAverage Co2 emissions per student per year: "    + String.format("%.2f", studentEmissions()) + " kgCO2e/student/year" +
-        "\nTrees needed to offset emissions: "                  + carbonOffset() + "\n" ;
+    public String toString(){
+        return
+        "School: "                                               + getSchoolName() +
+        "\n\tNumber of students: "                               + getNumberOfStudents() +
+        "\n\tNumber of bulbs: "                                  + getNumOfBulbs() +
+        "\n\tWatts per bulb: "                                   + getWattsPerBulb() +
+        "\n\tHours in use: "                                     + getHoursUsedPerDay() +
+        "\n\t\tAverage wattage per bulb: "                       + String.format("%.2f", averageWattage()) + " kW" +
+        "\n\t\tAverage yearly kWh: "                             + String.format("%.2f", averageYearlyPower()) + " kWh/year" +
+        "\n\t\tYearly total Co2 Emissions: "                     + String.format("%.2f", yearlyEmissions()) + " kgCo2e/year" +
+        "\n\t\tAverage Co2 Emissions per Student per Year: "     + String.format("%.2f", studentEmissions()) + " kgCo2e/student/year" +
+        "\nTrees needed to offset emissions: "                   + carbonOffset() + "\n" ;
+    
     }
 }    
