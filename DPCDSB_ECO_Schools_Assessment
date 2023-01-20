@@ -1,9 +1,9 @@
 //Client Code
-public class DPCDSB_ECO_Schools_Assessment {
+public class DPCDSB_Emissions_Assessment {
     public static void main(String[] args) {   
         //Create objects
 //<Marcus>
-        Emissions LOYO = new Emissions("Loyola", 9, 10, 2670, 840);
+        Emissions LOYO = new Emissions("Loyola", 12, 7, 2880, 1000);
         Emissions STFX = new Emissions("St.Francis-Xavier", 8.5, 10, 4050, 1200);
 //<Ryan>
         Emissions GONZ = new Emissions("Gonzaga", 9, 12, 3490, 1033);
@@ -15,8 +15,8 @@ public class DPCDSB_ECO_Schools_Assessment {
 //<Daniel>
         //Print calculation result for each object
         for (Emissions school : schoolList) {
-            //System.out.println(school.toString());
-            System.out.println(school.getSchoolName() + "\n\t\t\t\t Carbon Offset -->" + school.carbonOffset() + " trees");
+            System.out.println(school.toString());
+            //System.out.println(school.getSchoolName() + "\n\t\t\t\t Carbon Offset --> " + school.carbonOffset() + " trees");
         }
     } 
 }  
